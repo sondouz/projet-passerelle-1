@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
     <title>Jeu du Pendu</title>
+    
 </head>
 <body>
    
@@ -13,7 +14,9 @@
         <header class="titre">
             <h1>Le Jeu Du Pendu</h1>
         </header>
-        
+        <section class="gagne">
+           <p class="gagne-phase">Bravo, vous avez gagné !</p> 
+        </section>
         <div class="container-pendu">
 
             <svg height="300" width="250" class="svg-dessin">
@@ -40,7 +43,21 @@
             </svg>
 
             <!-- Bonnes lettres-->
-            <div class="mots" id="mots">Mot à trouver</div>
+            <div class="mots" id="mots"></div>
+
+            <div class="container-input">
+                <p>Entrez la lettre ou le bon mot</p>
+                <div class="verification">
+                    <input type="text" placeholder="Entrez une lettre ou un mot">
+                    <button type="submit" id="verifier">Vérifier</button>
+                </div>
+            </div>
+            <div class="rejouer">
+                <button id="btn-rejouer">Cliquez pour rejouer</button>
+            </div>
+            <div class="erreur">
+                <p>Mauvaises Lettres : <span class="lettreErronees"> a, b, c, d</span></p>
+            </div>
         </div>
         <footer class="footer">
             <p>2022 &copy; Kesso</p>
