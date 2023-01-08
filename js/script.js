@@ -74,10 +74,12 @@ function afficherMot() {
                     tableauDeBonnesLettres.push(laLettre);
                     afficherMot();
                 }else{
+                    
+                    notification.style.display="block";
                     notification.innerText = 'Vous avez déjà essayé cette lettre !';
-                    /*setTimeout(() => {
+                    setTimeout(() => {
                         notification.style.display = 'none';
-                    }, 2000);*/
+                    }, 2000);
                 }
             }else{
 
