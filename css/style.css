@@ -79,14 +79,16 @@ footer{
 }
 
 .mots{
+    display: flex;
     height: 50px;
     line-height: 50px;
     font-size: 1.3rem;
-    margin: -40px 0 20px 0;
+    justify-content: center;
 }
 .lettre{
     border-bottom: 3px solid #f1f1f1;
-    font-size: 25px;
+    display: inline-flex;
+    font-size: 30px;
     align-items: center;
     justify-content: center;
     margin: 0 3px;
@@ -123,6 +125,7 @@ footer{
 }
 .erreur{
     margin-bottom: 20px;
+    margin-top: 15px;
     font-size: 1.3rem;
 }
 #btn-rejouer{
@@ -133,6 +136,7 @@ footer{
     box-shadow: 0 2px 0 rgb(0, 133, 130);
     font-weight:600;
     letter-spacing: 2px;
+    margin:auto;
 }
 #btn-rejouer:hover{
     cursor: pointer;
