@@ -35,7 +35,6 @@ function afficherMot() {
     if(motAfficher === motSelectionne){
         notification.innerText = 'Bravo, vous avez gagné !';
         notification.style.display = "block";
-        notification.style.transition = 'all 0.3 ease-in-out';
         btnRejouer.style.display = "block";
         zoneSaisie.setAttribute('disabled',true);
     }else{
@@ -87,7 +86,7 @@ window.addEventListener('keydown', e => {
                 notification.innerText = 'Vous avez déjà essayé cette lettre !';
                 setTimeout(() => {
                     notification.style.display = 'none';
-                }, 5000);
+                }, 3000);
             }
         }else{
 
@@ -98,7 +97,11 @@ window.addEventListener('keydown', e => {
             }else{
                 
                 //affichierNotification();
-                
+                notification.style.display="block";
+                notification.innerText = 'Vous avez déjà essayé cette lettre, merci de choisir une autre !';
+                setTimeout(() => {
+                    notification.style.display = 'none';
+                }, 3000);
             }
         }
     }
@@ -116,7 +119,6 @@ btnRejouer.addEventListener('click', () => {
     btnRejouer.style.display = "none";
     dessin.forEach(el => el.style.display = "none");
     afficherMot();
-    //miseAJourMauvaisesLettres();
     document.querySelector('.gagne').style.display = 'none';
     console.log(motSelectionne);
 });
